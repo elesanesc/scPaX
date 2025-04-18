@@ -23,23 +23,23 @@ knitr::opts_chunk$set(
 ## Installation
 
 Install development tools (if not already installed):
-``` {r pre-instalation}
+``` {r pre-instalation, eval = FALSE}
 install.packages(c("devtools", "usethis"))
 ```
 
 Then install scPaX directly from GitHub:
-``` {r installation from github}
-devtools::install_github("yourusername/scPaX")
+``` {r installation from github, eval = FALSE}
+devtools::install_github("elesanesc/scPaX")
 ```
 
 Or, if you are working inside the package directory:
-``` {r installation from directory}
+``` {r installation from directory, eval = FALSE}
 # From within the scPaX project root
 devtools::install()
 ```
 
 ## Usage
-```{r scPaX example}
+```{r scPaX example, eval = FALSE}
 library(scPaX)
 library(Seurat)
 library(Signac)
@@ -67,7 +67,7 @@ pax_results$histogram
 
 ## Saving Outputs
 After running the function, you can save the output table as a .csv, .tsv, etc, and the plots as .png, .jpg, .pdf, etc.
-``` {r scPaX saving}
+``` {r scPaX saving, eval = FALSE}
 # Save the table to CSV
 write.csv(pax_results$data, "PaX_results.csv", row.names = FALSE)
 
@@ -78,7 +78,7 @@ ggsave("PaX_histogram.png", pax_results$histogram, width = 8, height = 6)
 
 ## Funtion Specifications
 
-```{r scPaX}
+```{r scPaX, eval = FALSE}
 calculate_PaX(seurat_obj = seurat_obj, assay = "peaks")
 ```
 
