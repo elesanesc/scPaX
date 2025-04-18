@@ -7,9 +7,7 @@
 probability of accessibility (Paₓ) of regulatory regions from
 single‑cell ATAC‑seq (scATAC‑seq) datasets. It uses a balls‑into‑bins
 model to fit a nonlinear curve and estimate the key parameter *a*, then
-produces a summary table and two publication‑ready plots: \* A **scatter
-plot** of Paₓ vs. number of fragments per region \* A **histogram of**
-log₁₀(Paₓ) distribution
+produces a summary table and two publication‑ready plots.
 
 ## Installation
 
@@ -85,19 +83,24 @@ calculate_PaX(seurat_obj = seurat_obj, assay = "peaks")
   - *seurat\_obj*: A Seurat object with a single‑cell ATAC assay.
   - *assay*: Name of the assay slot (default “peaks”).
 
-#### Value
+#### Output
 
-Returns a list with components: \* *model*: the fitted nonlinear model
-(nls object) \* *a*: numeric estimate of the parameter *a* \* *data*:
-data frame with fragment counts, raw & fitted Paₓ per region \*
-*scatter\_plot*: ggplot2 object of Paₓ vs. fragments \* *histogram*:
-ggplot2 object of log₁₀(Paₓ) distribution
+Returns a list with components: 
+
+  - *model*: the fitted nonlinear model (nls object) 
+  - *a*: numeric estimate of the parameter *a* 
+  - *data*: data frame with fragment counts, raw & fitted Paₓ per region 
+  - *scatter\_plot*: ggplot2 object of Paₓ vs. fragments 
+  - *histogram*: ggplot2 object of log₁₀(Paₓ) distribution
 
 ## Contact
 
 If you have any comments or suggestions about scPaX please raise an
-issue or contact us: Elena Sánchez-Escabias:
-<elena.sanchez.escabias@cabimer.es> JC Reyes: <jose.reyes@cabimer.es>
+issue or contact us:
+
+Elena Sánchez-Escabias: <elena.sanchez.escabias@cabimer.es>
+
+JC Reyes: <jose.reyes@cabimer.es>
 
 ## License
 
