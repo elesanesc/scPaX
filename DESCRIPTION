@@ -1,0 +1,17 @@
+Package: scPaX
+Title: Estimate and Visualize Accessibility Probabilities from scATAC-seq
+Version: 0.1.0
+Authors@R: c(
+    person("Elena", "Sánchez-Escabias", email = "elena.sanchez.escabias@cabimer.es", role = c("aut", "cre")),
+    person("JC", "Reyes", email = "jose.reyes@cabimer.es", role = "ths"),
+    person("CSIC", role = "cph"))
+Description: Compute the probability of accessibility (Paₓ) of regulatory regions in single-cell ATAC-seq data using a nonlinear balls-into-bins model.
+License: MIT + file LICENSE
+Depends: R (>= 4.0)
+Imports:
+  ggplot2,
+  stats,
+  utils
+RoxygenNote: 7.3.2
+Encoding: UTF-8
+LazyData: true
